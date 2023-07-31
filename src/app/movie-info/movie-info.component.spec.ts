@@ -6,11 +6,10 @@ describe('MovieInfoComponent', () => {
   let component: MovieInfoComponent;
   let fixture: ComponentFixture<MovieInfoComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [MovieInfoComponent],
-    }).compileComponents();
-
+    });
     fixture = TestBed.createComponent(MovieInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -9,9 +9,6 @@
   <div class="movie-grid-items" *ngFor="let movie of movies; let i = index">
     <mat-card>
       <mat-card-title>{{ movie.Title }}</mat-card-title>
-      <mat-card-subtitle>
-        Directed by: {{ movie.Directors.Name }}
-      </mat-card-subtitle>
       <img mat-card-image src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
       <mat-card-actions>
         <button
@@ -20,14 +17,6 @@
           matTooltip="Genre"
         >
           <mat-icon>theater_comedy</mat-icon>
-        </button>
-
-        <button
-          mat-button
-          (click)="getDirector(movie.Directors.Name, movie.Directors.Bio)"
-          matTooltip="Director"
-        >
-          <mat-icon>person</mat-icon>
         </button>
 
         <button

@@ -1,0 +1,114 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-progress-spinner {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin: 0 auto;
+}
+
+.movie-grid-items {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  place-self: center;
+  padding: 5px;
+}
+
+mat-card {
+  align-items: center;
+  min-width: 320px;
+}
+
+img {
+  max-height: 350px;
+  max-width: 350px;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    margin: 0 auto;
+  }
+
+  .movie-grid-items {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    place-self: center;
+  }
+
+  mat-card {
+    align-items: center;
+    min-width: 320px;
+  }
+
+  img {
+    max-height: 350px;
+    max-width: 350px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(230px, 1fr));
+    margin: 0 auto;
+  }
+
+  .movie-grid-items {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    place-self: center;
+  }
+
+  mat-card {
+    align-items: center;
+    min-width: 250px;
+  }
+
+  img {
+    max-height: 250px;
+    max-width: 250px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    margin: 0 auto;
+  }
+
+  .movie-grid-items {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    place-self: center;
+  }
+
+  mat-card {
+    align-items: center;
+    min-width: 300px;
+  }
+
+  img {
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: contain;
+  }
+}

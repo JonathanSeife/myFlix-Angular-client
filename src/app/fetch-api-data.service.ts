@@ -223,7 +223,7 @@ export class FetchApiDataService {
   getOneDirector(Name: string): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http
-      .get(apiUrl + 'movies/Director/' + Name, {
+      .get(apiUrl + 'Directors/' + Name, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
